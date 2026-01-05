@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: var(--font-inter);
+}
+
+/* Custom scrollbar optimization if needed, but keeping it clean for now */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-200;
+  /* Premium background effect only in dark mode or subtle in light */
+  background-image:
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
+  background-attachment: fixed;
+}
+
+:is(.dark body) {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+}
