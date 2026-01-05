@@ -77,11 +77,16 @@ export default function Home() {
     <main className="flex-1 max-w-3xl w-full mx-auto p-4 sm:p-6 lg:p-8 space-y-4">
 
       <header className="flex flex-row items-center justify-between pb-2 border-b border-slate-200 dark:border-white/5">
-        <div>
-          <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white mb-2 transition-colors">
-            Time Calculator
-          </h1>
-          <p className="text-slate-500 dark:text-slate-400 text-base sm:text-md transition-colors">Calculate hours effortlessly.</p>
+        <div className="flex items-center gap-4">
+          <div className="w-12 h-12 flex items-center justify-center">
+            <img src="/logo.svg" alt="Logo" className="w-full h-full object-contain" />
+          </div>
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white mb-1 transition-colors">
+              Time Calculator
+            </h1>
+            <p className="text-slate-500 dark:text-slate-400 text-base sm:text-md transition-colors">Calculate hours effortlessly.</p>
+          </div>
         </div>
         <ThemeToggle />
       </header>

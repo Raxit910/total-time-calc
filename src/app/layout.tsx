@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Time Duration Calculator",
   description: "Calculate duration between multiple time intervals",
+  icons: {
+    icon: "/logo.svg",
+  }
 };
 
 export default function RootLayout({
